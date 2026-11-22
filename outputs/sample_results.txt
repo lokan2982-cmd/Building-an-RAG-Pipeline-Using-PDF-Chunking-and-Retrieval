@@ -1,0 +1,84 @@
+RAG PIPELINE - ACTUAL EXECUTION RESULTS (LOCAL OLLAMA)
+======================================================================
+Embedding config : {'provider': 'ollama', 'model': 'nomic-embed-text', 'base_url': 'http://localhost:11434', 'api_key_required': False, 'ollama_running': True, 'model_installed': True}
+Chat model       : llama3.2 (local Ollama)
+Pipeline build   : 4.46s
+
+METRICS (computed from actual execution)
+  num_documents           : 3
+  num_pages               : 6
+  num_chunks              : 11
+  avg_chunk_size          : 790.1
+  min_chunk_size          : 345
+  max_chunk_size          : 995
+  chunk_size_setting      : 1000
+  chunk_overlap_setting   : 200
+  num_embeddings          : 11
+  faiss_vectors           : 11
+  embedding_model         : nomic-embed-text
+  chat_model              : llama3.2
+  embedding_dimensions    : 768
+  top_k                   : 3
+  build_seconds           : 4.46
+
+----------------------------------------------------------------------
+QUERY 1: What is Artificial Intelligence?  (25.65s)
+Top matching chunks:
+  [1] 01_intro_to_ai.pdf (Page 1, Chunk #0) | L2 distance=0.3375 | Introduction to Artificial Intelligence Chapter 1: What is Artificial Intelligence? Artificial intelligence (AI) refers to the simulation of human intelligence processes by compute...
+  [2] 01_intro_to_ai.pdf (Page 1, Chunk #1) | L2 distance=0.5477 | called Strong AI). Narrow AI is designed to perform a specific task, such as facial recognition or internet searches. General AI, by contrast, is a system that can perform any inte...
+  [3] 01_intro_to_ai.pdf (Page 2, Chunk #2) | L2 distance=0.7245 | Chapter 4: Challenges and Ethics in AI The development of AI raises several ethical concerns that researchers and policymakers must address: Bias and Fairness: AI systems can perpe...
+AI ANSWER (llama3.2):
+  Artificial Intelligence (AI) refers to the simulation of human intelligence processes by computer systems. These processes include learning, reasoning, and self-correction.
+  
+  Sources: 01_intro_to_ai.pdf, Page 1
+RETRIEVED SOURCES: 01_intro_to_ai.pdf (Page 1, L2=0.3375); 01_intro_to_ai.pdf (Page 1, L2=0.5477); 01_intro_to_ai.pdf (Page 2, L2=0.7245)
+
+----------------------------------------------------------------------
+QUERY 2: What are the types of machine learning?  (20.69s)
+Top matching chunks:
+  [1] 02_machine_learning.pdf (Page 1, Chunk #3) | L2 distance=0.4786 | Machine Learning Fundamentals Chapter 1: Introduction to Machine Learning Machine Learning (ML) is a subset of artificial intelligence that provides systems the ability to automati...
+  [2] 02_machine_learning.pdf (Page 2, Chunk #5) | L2 distance=0.6570 | Chapter 3: Key ML Algorithms Linear Regression: Models the relationship between a dependent variable and one or more independent variables using a linear equation. Decision Trees: ...
+  [3] 03_deep_learning_rag.pdf (Page 1, Chunk #7) | L2 distance=0.7051 | Deep Learning and Neural Networks Chapter 1: What is Deep Learning? Deep learning is a subset of machine learning that uses artificial neural networks with multiple layers (hence '...
+AI ANSWER (llama3.2):
+  The types of machine learning are:
+  
+  1. Supervised Learning
+  2. Unsupervised Learning
+  3. Reinforcement Learning
+  
+  Sources: 02_machine_learning.pdf, Page 1
+RETRIEVED SOURCES: 02_machine_learning.pdf (Page 1, L2=0.4786); 02_machine_learning.pdf (Page 2, L2=0.657); 03_deep_learning_rag.pdf (Page 1, L2=0.7051)
+
+----------------------------------------------------------------------
+QUERY 3: What is Retrieval-Augmented Generation (RAG)?  (24.18s)
+Top matching chunks:
+  [1] 03_deep_learning_rag.pdf (Page 2, Chunk #9) | L2 distance=0.5284 | Chapter 4: Large Language Models and RAG Large Language Models (LLMs) such as GPT-4, Claude, and Gemini are deep learning models trained on vast amounts of text data. They are capa...
+  [2] 03_deep_learning_rag.pdf (Page 2, Chunk #10) | L2 distance=0.7525 | 3. Embedding Generation: Each chunk is converted into a vector representation. 4. Vector Storage: Embeddings are stored in a vector database like FAISS or Pinecone. 5. Semantic Ret...
+  [3] 01_intro_to_ai.pdf (Page 1, Chunk #1) | L2 distance=0.9289 | called Strong AI). Narrow AI is designed to perform a specific task, such as facial recognition or internet searches. General AI, by contrast, is a system that can perform any inte...
+AI ANSWER (llama3.2):
+  Retrieval-Augmented Generation (RAG) is a technique that enhances Large Language Models (LLMs) by retrieving relevant documents from a knowledge base and incorporating them as context before generating a response.
+  
+  Sources: 03_deep_learning_rag.pdf, Page 2
+RETRIEVED SOURCES: 03_deep_learning_rag.pdf (Page 2, L2=0.5284); 03_deep_learning_rag.pdf (Page 2, L2=0.7525); 01_intro_to_ai.pdf (Page 1, L2=0.9289)
+
+----------------------------------------------------------------------
+QUERY 4: What is backpropagation?  (24.58s)
+Top matching chunks:
+  [1] 03_deep_learning_rag.pdf (Page 1, Chunk #8) | L2 distance=0.6416 | Activation Functions: Functions like ReLU, Sigmoid, and Tanh introduce non-linearity into the network, allowing it to learn complex patterns. Chapter 3: Training Neural Networks Ba...
+  [2] 03_deep_learning_rag.pdf (Page 1, Chunk #7) | L2 distance=0.8451 | Deep Learning and Neural Networks Chapter 1: What is Deep Learning? Deep learning is a subset of machine learning that uses artificial neural networks with multiple layers (hence '...
+  [3] 03_deep_learning_rag.pdf (Page 2, Chunk #9) | L2 distance=0.8700 | Chapter 4: Large Language Models and RAG Large Language Models (LLMs) such as GPT-4, Claude, and Gemini are deep learning models trained on vast amounts of text data. They are capa...
+AI ANSWER (llama3.2):
+  Backpropagation is the algorithm used to calculate gradients and update weights in a neural network, propagating the error signal from the output layer back through the network.
+  
+  Sources: 03_deep_learning_rag.pdf, Page 1
+RETRIEVED SOURCES: 03_deep_learning_rag.pdf (Page 1, L2=0.6416); 03_deep_learning_rag.pdf (Page 1, L2=0.8451); 03_deep_learning_rag.pdf (Page 2, L2=0.87)
+
+----------------------------------------------------------------------
+QUERY 5: What is quantum computing?  (22.21s)
+Top matching chunks:
+  [1] 01_intro_to_ai.pdf (Page 1, Chunk #1) | L2 distance=0.9403 | called Strong AI). Narrow AI is designed to perform a specific task, such as facial recognition or internet searches. General AI, by contrast, is a system that can perform any inte...
+  [2] 03_deep_learning_rag.pdf (Page 1, Chunk #7) | L2 distance=0.9416 | Deep Learning and Neural Networks Chapter 1: What is Deep Learning? Deep learning is a subset of machine learning that uses artificial neural networks with multiple layers (hence '...
+  [3] 01_intro_to_ai.pdf (Page 1, Chunk #0) | L2 distance=0.9437 | Introduction to Artificial Intelligence Chapter 1: What is Artificial Intelligence? Artificial intelligence (AI) refers to the simulation of human intelligence processes by compute...
+AI ANSWER (llama3.2):
+  The answer was not found in the uploaded documents.
+RETRIEVED SOURCES: 01_intro_to_ai.pdf (Page 1, L2=0.9403); 03_deep_learning_rag.pdf (Page 1, L2=0.9416); 01_intro_to_ai.pdf (Page 1, L2=0.9437)

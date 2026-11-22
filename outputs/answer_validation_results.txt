@@ -1,0 +1,55 @@
+LIVE ANSWER-VALIDATION RESULTS (real Ollama llama3.2 + nomic-embed-text + FAISS)
+========================================================================
+
+Q: Who coined the term artificial intelligence and in what year?
+  chunk[1] 01_intro_to_ai.pdf page=1 L2=0.4880 :: 'Introduction to Artificial Intelligence\nChapter 1: What is Artificial Intelligen'
+  chunk[2] 01_intro_to_ai.pdf page=1 L2=0.6756 :: 'called Strong AI). Narrow AI is designed to perform a specific task, such as fac'
+  chunk[3] 02_machine_learning.pdf page=1 L2=0.7609 :: 'Machine Learning Fundamentals\nChapter 1: Introduction to Machine Learning\nMachin'
+  raw LLM output : 'John McCarthy coined the term "Artificial Intelligence" in 1956 at the Dartmouth Conference.'
+  status=grounded found=True grounding_ratio=1.0
+  FINAL ANSWER   : John McCarthy coined the term "Artificial Intelligence" in 1956 at the Dartmouth Conference. |  | Sources: 01_intro_to_ai.pdf, Page 1
+
+Q: What is the difference between narrow AI and general AI?
+  chunk[1] 01_intro_to_ai.pdf page=1 L2=0.5540 :: 'called Strong AI). Narrow AI is designed to perform a specific task, such as fac'
+  chunk[2] 01_intro_to_ai.pdf page=1 L2=0.6205 :: 'Introduction to Artificial Intelligence\nChapter 1: What is Artificial Intelligen'
+  chunk[3] 01_intro_to_ai.pdf page=2 L2=0.7696 :: 'Chapter 4: Challenges and Ethics in AI\nThe development of AI raises several ethi'
+  raw LLM output : 'Narrow AI is designed to perform a specific task, such as facial recognition or internet searches, whereas General AI is a system that can perform any intellectual task that a human being can.'
+  status=grounded found=True grounding_ratio=0.929
+  FINAL ANSWER   : Narrow AI is designed to perform a specific task, such as facial recognition or internet searches, whereas General AI is a system that can perform any intellectual task that a human being can. |  | Sources: 01_intro_to_ai.pdf, Page 1
+
+Q: Who coined the term machine learning?
+  chunk[1] 02_machine_learning.pdf page=1 L2=0.5269 :: 'Machine Learning Fundamentals\nChapter 1: Introduction to Machine Learning\nMachin'
+  chunk[2] 01_intro_to_ai.pdf page=1 L2=0.7704 :: 'Introduction to Artificial Intelligence\nChapter 1: What is Artificial Intelligen'
+  chunk[3] 03_deep_learning_rag.pdf page=1 L2=0.8026 :: 'Deep Learning and Neural Networks\nChapter 1: What is Deep Learning?\nDeep learnin'
+  raw LLM output : 'Arthur Samuel.'
+  status=grounded found=True grounding_ratio=1.0
+  FINAL ANSWER   : Arthur Samuel. |  | Sources: 02_machine_learning.pdf, Page 1
+
+Q: What are activation functions in neural networks?
+  chunk[1] 03_deep_learning_rag.pdf page=1 L2=0.5339 :: 'Activation Functions: Functions like ReLU, Sigmoid, and Tanh introduce non-linea'
+  chunk[2] 03_deep_learning_rag.pdf page=1 L2=0.7129 :: 'Deep Learning and Neural Networks\nChapter 1: What is Deep Learning?\nDeep learnin'
+  chunk[3] 02_machine_learning.pdf page=1 L2=0.9023 :: 'Machine Learning Fundamentals\nChapter 1: Introduction to Machine Learning\nMachin'
+  raw LLM output : 'Functions like ReLU, Sigmoid, and Tanh introduce non-linearity into the network, allowing it to learn complex patterns.'
+  status=grounded found=True grounding_ratio=1.0
+  FINAL ANSWER   : Functions like ReLU, Sigmoid, and Tanh introduce non-linearity into the network, allowing it to learn complex patterns. |  | Sources: 03_deep_learning_rag.pdf, Page 1
+
+Q: What techniques help prevent overfitting?
+  chunk[1] 03_deep_learning_rag.pdf page=1 L2=0.8676 :: 'Activation Functions: Functions like ReLU, Sigmoid, and Tanh introduce non-linea'
+  chunk[2] 03_deep_learning_rag.pdf page=2 L2=0.9159 :: 'Chapter 4: Large Language Models and RAG\nLarge Language Models (LLMs) such as GP'
+  chunk[3] 02_machine_learning.pdf page=2 L2=0.9294 :: 'Chapter 3: Key ML Algorithms\nLinear Regression: Models the relationship between '
+  raw LLM output : 'Techniques like dropout, L1/L2 regularisation, and data augmentation help prevent overfitting.'
+  status=grounded found=True grounding_ratio=1.0
+  FINAL ANSWER   : Techniques like dropout, L1/L2 regularisation, and data augmentation help prevent overfitting. |  | Sources: 03_deep_learning_rag.pdf, Page 1
+
+Q: What does FAISS do?
+  chunk[1] 03_deep_learning_rag.pdf page=2 L2=0.9649 :: '3. Embedding Generation: Each chunk is converted into a vector representation.\n4'
+  chunk[2] 03_deep_learning_rag.pdf page=2 L2=1.1203 :: 'Chapter 4: Large Language Models and RAG\nLarge Language Models (LLMs) such as GP'
+  chunk[3] 01_intro_to_ai.pdf page=1 L2=1.1278 :: 'called Strong AI). Narrow AI is designed to perform a specific task, such as fac'
+  raw LLM output : 'FAISS enables fast nearest-neighbour search, which is essential for the retrieval step in a RAG pipeline.'
+  status=grounded found=True grounding_ratio=1.0
+  FINAL ANSWER   : FAISS enables fast nearest-neighbour search, which is essential for the retrieval step in a RAG pipeline. |  | Sources: 03_deep_learning_rag.pdf, Page 2
+
+Q: What is quantum computing?   (NOT in the PDFs)
+  raw LLM output : 'NOTFOUND'
+  status=model_not_found found=False
+  FINAL ANSWER   : The answer was not found in the uploaded documents.
